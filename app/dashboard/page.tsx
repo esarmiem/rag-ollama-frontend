@@ -4,9 +4,29 @@ import { motion } from "framer-motion"
 import { MessageSquare, Upload, FileSearch, List, RotateCcw, Database } from "lucide-react"
 import Link from "next/link"
 import { useAppContext } from "@/context/AppContext"
+import { useEffect } from "react"
+import { listPdfs } from "@/lib/api"
 
 export default function Dashboard() {
-  const { dbStatus, currentPdf } = useAppContext()
+  const { dbStatus, currentPdf, setCurrentPdf } = useAppContext()
+
+  useEffect(() => {
+    const loadCurrentPdf = async () => {
+      try {
+        const response = await listPdfs()
+        if (response.files && response.files.length > 0) {
+          setCurrentPdf(response.files[0].name)
+        } else {
+          setCurrentPdf(null)
+        }
+      } catch (error) {
+        console.error("Error loading PDFs:", error)
+        setCurrentPdf(null)
+      }
+    }
+
+    loadCurrentPdf()
+  }, [setCurrentPdf])
 
   const menuItems = [
     {
@@ -31,8 +51,8 @@ export default function Dashboard() {
       color: "bg-green-500",
     },
     {
-      title: "Listar PDFs",
-      description: "Ve todos los PDFs subidos",
+      title: "Listar bases de conocimiento",
+      description: "Ve todos los documentos subidos",
       icon: <List className="w-8 h-8" />,
       href: "/dashboard/list-pdfs",
       color: "bg-orange-500",
@@ -81,7 +101,7 @@ export default function Dashboard() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="card p-6"
         >
-          <h3 className="text-lg font-semibold text-gray-900 mb-2">PDF Actual</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">Ultimo base cargada</h3>
           <p className="text-gray-600">{currentPdf || "Ningún PDF cargado"}</p>
         </motion.div>
       </div>

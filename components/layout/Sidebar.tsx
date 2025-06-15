@@ -131,7 +131,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           <div className="p-4 border-t border-gray-200">
             <div className="text-center text-sm text-gray-500">
               <p>Experian-AI v1.0</p>
-              <p>Tu asistente inteligente</p>
+              <p>Delivery SP Latam</p>
             </div>
           </div>
         </div>

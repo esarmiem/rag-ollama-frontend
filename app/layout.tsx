@@ -9,7 +9,11 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "EXP-AI - Tu asistente inteligente para documentos PDF",
   description: "Analiza y consulta tus documentos PDF con inteligencia artificial",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/logoexperian.png',
+    apple: '/logoexperian.png',
+  }
 }
 
 export default function RootLayout({

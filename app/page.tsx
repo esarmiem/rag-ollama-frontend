@@ -10,22 +10,22 @@ export default function LandingPage() {
     {
       icon: <Brain className="w-8 h-8 text-blue-600" />,
       title: "IA Especializada",
-      description: "Chatbot entrenado con la base de conocimiento de Experian para asistencia técnica especializada",
+      description: "Sistema de IA entrenado con documentación técnica para asistencia especializada en desarrollo y soporte",
     },
     {
       icon: <FileText className="w-8 h-8 text-blue-600" />,
-      title: "Base de Conocimiento",
-      description: "Acceso a información técnica actualizada y documentación de Experian",
+      title: "Documentación Técnica",
+      description: "Integración con repositorios de documentación y bases de conocimiento internas",
     },
     {
       icon: <Zap className="w-8 h-8 text-blue-600" />,
-      title: "Soporte Inmediato",
-      description: "Respuestas rápidas y precisas para equipos de desarrollo, soporte y producto",
+      title: "Asistencia Técnica",
+      description: "Soporte especializado para equipos de desarrollo, integración y mantenimiento de sistemas",
     },
     {
       icon: <Shield className="w-8 h-8 text-blue-600" />,
-      title: "Seguridad Garantizada",
-      description: "Plataforma segura y confiable para el manejo de información técnica sensible",
+      title: "Seguridad Corporativa",
+      description: "Implementación de protocolos de seguridad y acceso controlado para información técnica",
     },
   ]
 
@@ -46,7 +46,7 @@ export default function LandingPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mb-8"
             >
-              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+              <h1 className="text-6xl md:text-8xl font-extrabold mb-4 roboto-gradient-text">
                 Experian-AI
               </h1>
               <Image
@@ -57,7 +57,7 @@ export default function LandingPage() {
                 className="mx-auto mb-4"
               />
               <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-                Tu asistente técnico inteligente para Experian Spanish Latam
+                Plataforma de asistencia técnica interna para equipos de Spanish Latam
               </p>
             </motion.div>
 
@@ -67,7 +67,7 @@ export default function LandingPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-lg text-gray-700 max-w-2xl mx-auto mb-12"
             >
-              Optimiza el soporte técnico de tus equipos con nuestro chatbot especializado. Accede a respuestas precisas y documentación técnica actualizada de Experian en tiempo real.
+              Sistema de asistencia técnica basado en IA para equipos internos. Proporciona acceso a documentación técnica, guías de implementación y soporte especializado.
             </motion.p>
 
             <motion.div
@@ -81,7 +81,7 @@ export default function LandingPage() {
                   whileTap={{ scale: 0.95 }}
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
                 >
-                  Comenzar ahora
+                  Acceder al dashboard
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
               </Link>
@@ -128,9 +128,9 @@ export default function LandingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">¿Por qué elegir Experian-AI?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Capacidades del Sistema</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Descubre cómo nuestro chatbot especializado puede mejorar la eficiencia de tus equipos de desarrollo, soporte y producto
+              Plataforma interna diseñada para optimizar el soporte técnico y desarrollo de sistemas
             </p>
           </motion.div>
 
@@ -163,9 +163,9 @@ export default function LandingPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">¿Listo para optimizar el soporte técnico de tu equipo?</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Acceso al Sistema de Asistencia Técnica</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Únete a los equipos de Experian Spanish Latam que ya están transformando su asistencia técnica
+              Plataforma disponible para equipos internos con acceso autorizado
             </p>
             <Link href="/dashboard">
               <motion.button
@@ -173,7 +173,7 @@ export default function LandingPage() {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-blue-600 font-semibold py-4 px-8 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
               >
-                Acceder a la aplicación
+                Acceder al dashboard
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
             </Link>

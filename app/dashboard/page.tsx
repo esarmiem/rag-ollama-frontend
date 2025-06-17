@@ -44,6 +44,13 @@ export default function Dashboard() {
       color: "bg-purple-500",
     },
     {
+      title: "Chat con OpenAI",
+      description: "Consulta sobre tus datos usando OpenAI",
+      icon: <FileSearch className="w-8 h-8" />,
+      href: "/dashboard/ask-pdf-openai",
+      color: "bg-green-500",
+    },
+    {
       title: "Subir PDF",
       description: "Carga un nuevo documento PDF",
       icon: <Upload className="w-8 h-8" />,

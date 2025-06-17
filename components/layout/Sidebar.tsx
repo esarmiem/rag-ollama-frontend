@@ -31,6 +31,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       icon: <FileSearch className="w-5 h-5" />,
     },
     {
+      title: "Chat con OpenAI",
+      href: "/dashboard/ask-pdf-openai",
+      icon: <FileSearch className="w-5 h-5" />,
+    },
+    {
       title: "Subir PDF",
       href: "/dashboard/upload",
       icon: <Upload className="w-5 h-5" />,

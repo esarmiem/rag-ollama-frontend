@@ -84,6 +84,27 @@ export const askPdf = async (query: string): Promise<string> => {
   }
 }
 
+// Ask PDF with OpenAI
+export const askPdfOpenAI = async (query: string): Promise<string> => {
+  try {
+    const response = await askPdfApi.post("/ask_pdf_openai", { query })
+    console.log("Backend response:", response.data)
+    const fullResponse = response.data.respuesta || "Sin respuesta"
+    
+    // Remove both opening and closing think tags and their content
+    const thinkStartIndex = fullResponse.indexOf("<think>")
+    const thinkEndIndex = fullResponse.indexOf("</think>")
+    if (thinkStartIndex !== -1 && thinkEndIndex !== -1) {
+      return fullResponse.slice(thinkEndIndex + 8).trim()
+    }
+    
+    return fullResponse
+  } catch (error) {
+    console.error("Ask PDF OpenAI error:", error)
+    throw new Error("Error al consultar el PDF con OpenAI")
+  }
+}
+
 // List PDFs
 export const listPdfs = async (): Promise<ListPdfsResponse> => {
   try {
